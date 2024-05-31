@@ -1,0 +1,20 @@
+.section-sale {
+  padding: 24px 0;
+
+  color: #ffffff;
+  text-align: center;
+
+  background-color: #d91223;
+
+  @media (min-width: 992px) {
+    padding: 36px 0;
+  }
+}
+.section-sale .h2 {
+  margin-bottom: 0;
+
+  font-weight: 400;
+}
+.section-sale a {
+  color: #ffffff;
+}

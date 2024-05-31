@@ -1,0 +1,16 @@
+.section-contact-form {
+  margin-bottom: 0;
+  padding: 48px 0;
+
+  color: #ffffff;
+
+  background-image: url("/images/section-contact-form__bg.jpg");
+  background-size: cover;
+}
+.section-contact-form .row > div {
+  margin-bottom: 12px;
+
+  @media (min-width: 992px) {
+    margin-bottom: 24px;
+  }
+}

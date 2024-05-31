@@ -1,0 +1,21 @@
+section.section.section-contact-form
+	div.container.container--small
+		div.row
+			div.col-12
+				h2.h2 Оставить сообщение
+
+				form(action="/#" method="post") 
+					div.row
+						div.col-12.col-md-6
+							input.input(type="text" name="name" placeholder="Имя...")
+
+						div.col-12.col-md-6
+							input.input(type="email" name="email" placeholder="Email...")
+
+					div.row
+						div.col-12
+							textarea.textarea(type="text" name="message" placeholder="Сообщение...")
+
+					div.row
+						div.col-12.text-center
+							+button({text: "Отправить", type: "submit"})
