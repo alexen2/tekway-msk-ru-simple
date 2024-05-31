@@ -35,7 +35,7 @@ let path = {
 		resources_js: "src/resources/js/*.js",
 		resources_fonts: "src/resources/fonts/*.{eot,svg,ttf,woff,woff2,otf}",
 		resources_css: "src/resources/css/*.css",
-		resources: "src/resources/*.*",
+		resources: "src/resources/video/*.{mp4,webm}",
 		icon: "src/resources/icons/*.svg",
 	},
 	watch: {
@@ -153,18 +153,18 @@ function icon() {
 				})
 			)
 			/*.pipe(svgmin(function (file) {
-	    var prefix = path2.basename(file.relative, path2.extname(file.relative));
-	    
-	    return {
-	      plugins: [{
-	        cleanupIDs: {
-	          prefix: prefix + '-',
-	          minify: true,
-	          removeViewBox: false
-	        }
-	      }]
-	    }
-	  }))*/
+			var prefix = path2.basename(file.relative, path2.extname(file.relative));
+		  
+			return {
+				plugins: [{
+					cleanupIDs: {
+						prefix: prefix + '-',
+						minify: true,
+						removeViewBox: false
+					}
+				}]
+			}
+		}))*/
 			.pipe(svgstore())
 			.pipe(gulp.dest(path.build.img))
 	);
@@ -190,7 +190,7 @@ function resources_css() {
 }
 
 function resources_other_file() {
-	return gulp.src(path.src.resources).pipe(gulp.dest(path.build.html));
+	return gulp.src(path.src.resources).pipe(gulp.dest(path.build.html + "/video"));
 }
 
 function watch() {

@@ -1,8 +1,6 @@
-# tekway-msk.ru -простая версия
+# tekway-msk.ru -РїСЂРѕСЃС‚Р°СЏ РІРµСЂСЃРёСЏ
 
 ## Demo
-
-
 
 ##Node
 
@@ -17,7 +15,7 @@ Install
 Build
 
     $ gulp build
-    
+
 Run locally
 
     $ gulp
