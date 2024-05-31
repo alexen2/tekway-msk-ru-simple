@@ -1,0 +1,11 @@
+.features {
+	display: flex;
+	align-items: center;
+	padding: 0 24px;
+	height: 56px;
+
+	color: var(--color-typography-secondary);
+
+	background-color: var(--color-surface-primary);
+	border-radius: 18px;
+}

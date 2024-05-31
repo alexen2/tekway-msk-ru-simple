@@ -1,0 +1,7 @@
+mixin tabs(data)
+	div.tabs(id=data.id)
+		each val, index in data.items
+			if index == 0
+				button.tabs__item.tabs__item--active(data-id=data.id+"-"+val.id)!=val.text
+			else
+				button.tabs__item(data-id=data.id+"-"+val.id)!=val.text

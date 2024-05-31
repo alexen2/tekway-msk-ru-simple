@@ -1,0 +1,95 @@
+.viewing-image {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	width: 100%;
+	height: 100vh;
+	padding: 50px 20px;
+
+	text-align: center;
+
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.75);
+	opacity: 0;
+	pointer-events: none;
+
+	transition: all var(--animation-speed);
+}
+.viewing-image--open {
+	opacity: 1;
+	pointer-events: all;
+
+	transition: all var(--animation-speed);
+}
+.viewing-image::before {
+	display: inline-block;
+	height: 100%;	
+	margin-right: -0.05em;
+
+	vertical-align: middle;
+	content: "";
+}
+.viewing-image__body {	
+	position: relative;
+
+	display: inline-block;
+  width: 95%; 
+  max-width: 1200px; 
+	padding: 3px;
+
+	vertical-align: middle;
+  background-color: var(--color-surface-primary); 
+	border-radius: 8px;
+	box-shadow: var(--shadow);
+}
+.viewing-image__body > img {
+	display: block;
+	width: 100%;
+
+	border-radius: 8px;
+}
+.viewing-image__close {
+	position: absolute;
+	top: -16px;
+	right: -16px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 32px;
+	height: 32px;
+
+	background-color: var(--color-action-primary);
+	border: none;
+	border-radius: 50%;
+	opacity: 1;
+
+	transition: all var(--animation-speed);
+}
+.viewing-image__close:hover {
+	cursor: pointer;
+	opacity: 0.85;
+
+	transition: all var(--animation-speed);
+}
+.viewing-image__close .icon {
+	display: block;
+	width: 32px;
+	height: 32px;
+
+	fill: var(--color-typography-contrast);
+}
+img[data-img] {
+	cursor: pointer;
+	opacity: 1;
+
+	transition: all var(--animation-speed);
+}
+img[data-img]:hover {
+	opacity: 0.7;
+
+	transition: all var(--animation-speed);
+}

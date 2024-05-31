@@ -1,0 +1,16 @@
+doctype html
+html(lang="ru")
+	include include/head.pug
+	+head({
+		title: 'Шлифовальные машинки: Электрорубанки орбитально-эксцентриковые - TEKWAY'
+	})
+
+	body
+		div.wrapper
+			include ../blocks/mixins.pug
+
+			include ../blocks/header/header.pug
+
+			include ../blocks/catalog/catalog.pug
+
+		include include/script.pug

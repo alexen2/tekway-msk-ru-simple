@@ -1,0 +1,32 @@
+.footer {
+	margin-top: 80px;
+	padding: 40px 0;
+
+	text-align: center;
+	color: var(--color-typography-secondary);
+
+	background-color: var(--color-background-secondary);
+
+	@media(min-width: 768px) {
+		margin-top: 105px;
+
+		text-align: left;
+	}
+}
+.footer__right {
+	@media(max-width: 767px) {
+		margin-top: 24px;
+	}
+}
+.footer__social-title {
+	margin-bottom: 4px;
+
+	text-align: center;
+}
+.footer .social {
+	margin: 0 auto;
+	justify-content: center;
+}
+.footer .social .icon {
+	fill: var(--color-typography-secondary);
+}

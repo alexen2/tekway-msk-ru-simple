@@ -1,0 +1,43 @@
+.button {
+  position: relative;
+
+  box-sizing: border-box;
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  padding: 0 30px;
+  margin: 0;
+
+  font-size: 20px;
+  line-height: 28px;
+  color: #ffffff;
+  text-decoration: none;
+  vertical-align: middle;
+
+  cursor: pointer;
+  user-select: none;
+  background: #d91223;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  opacity: 1;
+
+  transition: all 0.3s;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.button:hover {
+  opacity: 0.8;
+  border: none;
+}
+.button:active {
+}
+
+.button:disabled,
+.button[disabled],
+.button:disabled:hover,
+.button[disabled]:hover {
+}

@@ -1,0 +1,17 @@
+.header {
+  padding: 20px 0;
+
+  background-color: #10171c;
+
+  @media (min-width: 768px) {
+    padding: 50px 0;
+  }
+}
+.header__menu {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+    margin-top: 40px;
+  }
+}

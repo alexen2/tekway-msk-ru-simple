@@ -1,0 +1,8 @@
+mixin list(data)
+	div.list(class=data.class)
+		if data.title
+			h3.h3.list__title!= data.title
+
+		ul
+			each val in data.value
+				li!= val

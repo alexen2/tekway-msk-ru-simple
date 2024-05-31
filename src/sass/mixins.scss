@@ -1,0 +1,117 @@
+/*
+ * Colors
+ *
+ */
+
+@mixin btn-colors-modifiers($value) {
+	color: nth($value, 1);
+	background-color: nth($value, 2);
+	border-color: nth($value, 3);
+	&:hover {
+		background-color: nth($value, 4);
+		border-color: nth($value, 5);
+	}
+	.icon {
+		@if nth($value, 6) == null {
+			fill: nth($value, 1);
+		}
+		@else {
+			fill: nth($value, 6);
+		}
+	}
+}
+
+/*
+ * Fonts
+ *
+ */
+
+@mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
+	@each $fs-breakpoint, $fs-font-size in $fs-map {
+		@if $fs-breakpoint == null {
+			@include make-font-size($fs-font-size);
+		}
+		@else {
+			// If $fs-font-size is a key that exists in
+			// $fs-breakpoints, use the value
+			@if map-has-key($fs-breakpoints, $fs-breakpoint) {
+				$fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+			}
+			@media screen and (min-width: $fs-breakpoint) {
+				@include make-font-size($fs-font-size);
+			}
+		}
+	}
+}
+
+// Utility function for mixin font-size
+
+@mixin make-font-size($fs-font-size) {
+	// If $fs-font-size is a list, include
+	// both font-size and line-height
+	@if type-of($fs-font-size) == "list" {
+		font-size: nth($fs-font-size, 1);
+		@if (length($fs-font-size) > 1) {
+			line-height: nth($fs-font-size, 2);
+		}
+	}
+	@else {
+		font-size: $fs-font-size;
+	}
+}
+
+/*
+ * Blocks
+ *
+ */
+
+@mixin width-height($width-height, $w-breakpoints: $breakpoints) {
+	@each $w-breakpoint, $w-h in $width-height {
+		@if $w-breakpoint == null {
+			@include make-width-height($w-h);
+		}
+		@else {
+			@if map-has-key($w-breakpoints, $w-breakpoint) {
+				$w-breakpoint: map-get($w-breakpoints, $w-breakpoint);
+			}
+			@media screen and (min-width: $w-breakpoint) {
+				@include make-width-height($w-h);
+			}
+		}
+	}
+}
+@mixin make-width-height($width-height) {
+	width: nth($width-height, 1);
+	height: nth($width-height, 2);
+}
+@mixin margin($margin, $margin-side, $w-breakpoints: $breakpoints) {
+	@each $w-breakpoint, $margin-value in $margin {
+		@if $w-breakpoint == null {
+			@if $margin-side == 'left' {
+				@include margin-left($margin-value);
+			}
+			@if $margin-side == 'right' {
+				@include margin-right($margin-value);
+			}
+		}
+		@else {
+			@if map-has-key($w-breakpoints, $w-breakpoint) {
+				$w-breakpoint: map-get($w-breakpoints, $w-breakpoint);
+			}
+			@media screen and (min-width: $w-breakpoint) {
+				@if $margin-side == 'left' {
+					@include margin-left($margin-value);
+				}
+				@if $margin-side == 'right' {
+					@include margin-right($margin-value);
+				}
+			}
+		}
+	}
+}
+@mixin margin-left($margin-left) {
+	margin-left: $margin-left;
+}
+@mixin margin-right($margin-right) {
+	margin-right: $margin-right;
+}

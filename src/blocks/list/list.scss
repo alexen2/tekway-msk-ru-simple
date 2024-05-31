@@ -1,0 +1,20 @@
+.list {
+  font-size: 14px;
+  line-height: 18px;
+}
+.list ul {
+  margin-left: 20px;
+}
+.list--no-list-style ul {
+  margin-left: 0;
+
+  list-style: none;
+}
+.list li {
+  margin-bottom: 15px;
+}
+.list__title {
+  margin-bottom: 18px;
+
+  // border-bottom: 1px solid #eeeeee;
+}
