@@ -2,15 +2,32 @@ section.section.section-contact-form
 	div.container.container--small
 		div.row
 			div.col-12
-				h2.h2 Оставить сообщение
+				h2.h2 Контакты
 
-				form(action="/#" method="post") 
+		div.row
+			div.col-12.col-md-6
+				div.section-contact-form__contact-item
+					b Телефон: 
+					p
+						a(href="tel:84951424755") +7 (495) 142-47-55
+
+				div.section-contact-form__contact-item
+					b Email: 
+					p
+						a(href="mailto:info@tekway-msk.ru") info@tekway-msk.ru
+
+				div.section-contact-form__contact-item
+					b Адрес: 
+					p г. Москва ул. Складочная, дом 1
+
+			div.col-12.col-md-6
+				form(action="/#" method="post" id="formContact") 
 					div.row
-						div.col-12.col-md-6
+						div.col-12.col-lg-6
 							input.input(type="text" name="name" placeholder="Имя...")
 
-						div.col-12.col-md-6
-							input.input(type="email" name="email" placeholder="Email...")
+						div.col-12.col-lg-6
+							input.input(type="email" name="email" id="formContactEmail" placeholder="Email...")
 
 					div.row
 						div.col-12

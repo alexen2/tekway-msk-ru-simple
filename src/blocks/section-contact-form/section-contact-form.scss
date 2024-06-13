@@ -14,3 +14,17 @@
     margin-bottom: 24px;
   }
 }
+.section-contact-form__contact-item {
+  display: flex;
+  gap: 12px;
+}
+.section-contact-form__contact-item b {
+  display: block;
+  width: 120px;
+  flex: 0 0 120px;
+  margin-bottom: 12px;
+}
+.section-contact-form__contact-item a {
+  text-decoration: none;
+  color: #ffffff;
+}
