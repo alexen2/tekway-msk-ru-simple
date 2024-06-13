@@ -22,22 +22,23 @@ const contactForm = () => {
 	});
 
 	function sendFeedback(feedback) {
-		fetch("http://localhost:5000/api/feedback", {
+		fetch("/api/feedback", {
 			method: 'POST',
 			headers: {
 				"Content-Type": "application/json"
 			},
 			body: JSON.stringify(feedback),
 		})
-			.then(respons => {
+			.then(response => {
 				if (!response.ok) {
+					formContact.innerHTML = "<h2 style='text-align: center;'>Произошла ошибка. Сообщение не отправленно!</h2>";
+
 					throw new Error(`HTTP error! status: ${response.status}`);
 				}
-				return response.json();
-			})
-			.then(data => {
-				console.log("Server response: ", data)
+
 				formContact.innerHTML = "<h2 style='text-align: center;'>Спасибо, сообщение отправлено!</h2>";
+
+				return response.json();
 			})
 			.catch(error => {
 				console.log(error);
