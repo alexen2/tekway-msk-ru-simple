@@ -26,8 +26,8 @@ app.post('/api/feedback', async (req, res) => {
 			subject: 'Message',
 			text: 'I hope this message gets delivered!'
 		}, (err, info) => {
-			console.log(info.envelope);
-			console.log(info.messageId);
+			console.log("info", info);
+			console.log("err", err);
 		});
 
 
