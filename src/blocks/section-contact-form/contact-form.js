@@ -22,7 +22,7 @@ const contactForm = () => {
 	});
 
 	function sendFeedback(feedback) {
-		fetch("http://localhost:5000/api/feedback", {
+		fetch("/api/feedback", {
 			method: 'POST',
 			headers: {
 				"Content-Type": "application/json"
