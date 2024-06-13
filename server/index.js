@@ -50,7 +50,7 @@ app.post('/api/feedback', async (req, res) => {
 	}
 });
 
-app.get('/test', (req, res) => {
+app.get('/api/test', (req, res) => {
 	res.json({
 		status: 200,
 		message: "OK!"
