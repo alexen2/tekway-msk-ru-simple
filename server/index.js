@@ -50,6 +50,13 @@ app.post('/api/feedback', async (req, res) => {
 	}
 });
 
+app.get('/test', (req, res) => {
+	res.json({
+		status: 200,
+		message: "OK!"
+	});
+});
+
 const start = async = () => {
 	try {
 		app.listen(PORT, () => console.log(`Server start ${PORT} port`));
