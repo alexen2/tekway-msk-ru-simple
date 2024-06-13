@@ -14,9 +14,9 @@ const contactForm = () => {
 
 		if (isNoError) {
 			const feedbackFormData = new FormData(event.target);
-			console.log(feedbackFormData);
+			// console.log(feedbackFormData);
 			const feedback = Object.fromEntries(feedbackFormData);
-			console.log(feedback)
+			// console.log(feedback)
 			sendFeedback(feedback);
 		}
 	});

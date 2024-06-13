@@ -14,6 +14,8 @@ app.post('/api/feedback', async (req, res) => {
 	try {
 		const { name, email, message } = req.body;
 
+		console.log("TEST", email)
+
 		let transporter = nodemailer.createTransport({
 			host: 'smtp.timeweb.ru',
 			port: 465,
