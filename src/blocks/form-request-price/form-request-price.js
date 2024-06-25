@@ -22,7 +22,7 @@ const formRequestPrice = () => {
 	});
 
 	function sendFeedback(feedback) {
-		fetch("/api/feedback", {
+		fetch("/api/request-price", {
 			method: 'POST',
 			headers: {
 				"Content-Type": "application/json"
@@ -38,6 +38,8 @@ const formRequestPrice = () => {
 
 				// formContact.innerHTML = "<h2 style='text-align: center;'>Спасибо, сообщение отправлено!</h2>";
 				formContact.reset();
+				document.querySelector('.modal').classList.remove('modal--show');
+
 				return response.json();
 			})
 			.catch(error => {
