@@ -19,11 +19,11 @@ mixin card(data)
 				if data.description
 					p.card__description!= data.description
 
-				if data.price
-					p.card__price!= data.price
+				//- if data.price
+				//- 	p.card__price!= data.price
 
 				if data.parameters
 					each list in data.parameters
 						+list({title: list.title, value: list.value, class: "list--no-list-style"})
 
-				+button({text: "Запросить цену"})
+				+button({text: "Запросить цену", product: data.title})(class="modal-show")

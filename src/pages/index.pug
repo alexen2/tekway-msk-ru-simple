@@ -25,4 +25,7 @@ html(lang="ru")
 
 			include ../blocks/section-contact-form/section-contact-form.pug
 
+			+modal({title: "Запросить цену", id: "checkPrice"})
+				include ../blocks/form-request-price/form-request-price.pug
+
 		include include/script.pug

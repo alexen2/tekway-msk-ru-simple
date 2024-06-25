@@ -1,0 +1,77 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+
+  display: none;
+}
+.modal--show {
+  display: block;
+}
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+.modal__title {
+  margin: 0;
+}
+.modal__close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  width: 32px;
+  height: 32px;
+
+  color: #10171c;
+
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #ffffff;
+  opacity: 1;
+
+  transition: all 0.3s;
+}
+.modal__close:hover {
+  opacity: 0.75;
+
+  transition: all 0.3s;
+}
+.modal__body {
+  position: relative;
+
+  margin: 20px;
+  padding: 20px;
+  max-height: 100%;
+  width: 100%;
+  max-width: 380px;
+
+  color: #ffffff;
+
+  overflow-y: auto;
+  background-color: #10171c;
+  background-image: url("/images/section-contact-form__bg.jpg");
+  border-radius: 4px;
+}

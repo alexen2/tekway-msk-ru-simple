@@ -1,0 +1,18 @@
+form.form-request-price(action="" method="post" id="formRequestPrice")
+	div.row
+		div.col-12
+			input.input(type="text" name="name" placeholder="Имя...")
+
+		div.col-12
+			input.input(type="text" name="phone" required placeholder="Телефон..." id="formRequestPricePhone")
+
+		div.col-12
+			input.input(type="email" name="email" placeholder="Email...")
+
+		div.col-12
+			textarea.textarea(type="text" name="message" placeholder="Сообщение...")
+
+		input.input(type="hidden" name="product" id="formRequestPriceProduct")
+
+		div.col-12.text-center
+			+button({text: "Запросить", type: "submit"})
